@@ -1,0 +1,423 @@
+body{
+  margin: 0 0;
+  padding: 0 0;
+}
+a{
+  text-decoration: none;}
+.button{
+  background-color: #cd0224;
+  width: 300px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 50px auto 100px;
+}
+.button:hover {
+  background: rgb(253, 139, 139);
+  color: #fff;
+}
+/*ヘッダー*/
+.tech {
+  text-decoration: none;
+  color:black
+}
+.tech:hover {
+  opacity: 0.7;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.header-ttl {
+  font-size: 24px;
+  width: 80px;
+}
+.header-nav-list {
+  display: flex;
+  font-weight: bold;
+  list-style-type: none;
+  text-decoration: none;
+  padding-right: 100px;
+}
+.header-nav-item:not(:last-child) {
+  margin-right: 30px;
+}
+.header-nav-item-text{
+  color: black;
+}
+.header-nav-item-text:hover {
+  opacity: 0.7;
+}
+.menu {
+  display: none;
+}
+.drawer-nav {
+  display: none;
+}
+@media(max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  .menu-line-top,
+  .menu-line-middle,
+  .menu-line-bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+  .menu-line-top {
+    top: 0;
+  }
+  .menu-line-middle {
+    top: 14px;
+  }
+  .menu-line-bottom {
+    bottom: 0;
+  }
+  .menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+  .menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+  .drawer-nav{
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: rgb(255, 255, 255);
+    transition: .7s;
+  }
+  .drawer-nav-list {
+    padding-top: 80px;
+    text-align: center;
+  }
+  .drawer-nav-item {
+    margin-top: 40px;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none
+  }
+  .in {
+    transform: translateX(100%);
+  }
+
+  .footer-campanyname {
+    margin: 0 auto;
+  }
+
+  .footer-nav-item {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .footer-nav-item:after {
+    display: none;
+  }
+}
+/*トップ画像*/
+.top {
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../img/mv.png");
+  background-size: cover;
+  color: aliceblue;
+}
+.top-text{
+  display: table-cell;
+  vertical-align: middle;
+}
+.top-title {
+  font-size: 50px;
+}
+.top-Sentence {
+  font-size: 18px;
+}
+/*ボックス1*/
+.box1 {
+  display: block;
+  background-color: #222;
+  color: aliceblue;
+  width: 100%;
+  padding: 70px 0;
+}
+.box1-title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 30px;
+}
+.box1-text {
+  margin-top: 20px;
+  padding: 0px 30px;
+}
+/*サービス*/
+.sarvice {
+  /*確認用
+  background-color: rgb(0, 207, 190);
+  */
+  color: rgb(10, 10, 10);
+}
+.sarvice-title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 100px;
+}
+.sarvice-list {
+  /*確認用
+  background-color: rgb(255, 6, 193);
+  */
+  text-align:left;
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+.sarvice-box {
+  width: 49%;
+}
+.sarvice-box-title{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.sarvice-box-picture {
+  width: 95%;
+}
+.sarvice-box-text {
+  margin-top: 0px;
+  width: 90%;
+}
+
+/*ニュース*/
+.news{
+  background-color: rgb(34, 31, 31);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+.news-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+}
+.news-top-title{
+  display: inline;
+  margin: 0px 10px;
+}
+.news-top-link{
+  color: aliceblue;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 20px;
+  right: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #cd0224;
+}
+.news-top-link:hover {
+  background: rgb(253, 139, 139);
+  color: #fff;
+}
+.news-link-content{
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+  font-size: 14px;
+  padding: 10px;
+  margin: 10px 50px;
+}
+.news-link-content:hover {
+  background: rgb(194, 194, 194);
+  color: rgb(2, 2, 2);
+  transition: 0.5s;
+}
+.news-link-content-date{
+  margin-right: 10px;
+}
+.news-link-content-text{
+  font-weight: bold;
+}
+/*社員ブログ*/
+.blog {
+  /*確認用
+  background-color: rgb(0, 207, 190);
+  */
+  color: rgb(10, 10, 10);
+}
+.blog-title {
+  text-align: center;
+  font-size: 30px;
+}
+.blog-link-content{
+  /*確認用
+  background-color: rgb(255, 6, 193);
+  */
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+.blog-link {
+  margin: auto;
+  width: 30%;
+}
+.blog-link-picture{
+  background-size: 300px 100px;
+  width: 90%;
+  display: block;
+}
+.blog-link-picture:hover {
+  opacity: 0.7;
+}
+.blog-link-date{
+  margin: 5px 0 0 0;
+  font-size: 14px;
+}
+.blog-link-text {
+  width: 90%;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.blog-link-text:hover {
+  color: rgb(112, 112, 112);
+}
+/*会社概要・採用情報*/
+.Company-Profile-Recruitment{
+  display:flex;
+  background-color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+}
+.Company-Profile{
+  width: 100%;
+  color: white;
+  background-color: #cd0224;
+  text-align: center;
+  padding: 100px 0;
+}
+.Company-Profile:hover {
+  background: rgb(255, 108, 108);
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+.Recruitment{
+  width: 100%;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 100px 0;
+}
+.Recruitment:hover {
+  background: rgb(82, 82, 82);
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+/*お問い合わせ*/
+.inquiry{
+  margin-top: 80px;
+  padding: 50px 0 1px 0;
+  background-color:#f5f6f9;
+  text-align: center;
+}
+.inquiry-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+.inquiry-text{
+  margin-top: 10px;
+}
+.inquiry-button{
+  background-color: #cd0224;
+  width: 300px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 50px auto 60px;
+}
+/*フッター*/
+.footer{
+  background-color: #222;
+  color:#ffffff;
+}
+.footer-campanyname-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.footer-campanyname{
+  margin-left: 50px;
+  align-items: center;
+}
+.footer-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  color: rgb(250, 250, 250);
+  text-decoration: none;
+}
+.footer-nav-list{
+  display: flex;
+  font-weight: bold;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.footer-nav-item{
+  margin: 10px 10px;
+}
+.footer-nav-item:after {
+  content: "|";
+  padding: 0 10px;
+}
+
+.footer-nav-item-link{
+  color: white;
+}
+.footer-nav-item-link:hover {
+  opacity: 0.7;
+}
